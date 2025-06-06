@@ -77,7 +77,7 @@ async function getAllAcrtresses(): Promise<Actress[]> {
   try {
     const response = await fetch(`http://localhost:3333/actresses`)
     if (!response.ok) {
-      throw new Error(`errore http ${response.status}: ${response.ststusText}`)
+      throw new Error(`errore http ${response.status}: ${response.statusText}`)
     }
 
     const dati: unknown = await response.json()
